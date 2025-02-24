@@ -3,7 +3,9 @@ package hello.hello_spring.service;
 import hello.hello_spring.domain.Member;
 import hello.hello_spring.repository.MemberRepository;
 import hello.hello_spring.repository.MemoryMemberRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository = new MemoryMemberRepository();
