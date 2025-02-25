@@ -1,5 +1,8 @@
 package hello.hello_spring.domain;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@Entity
 public class Member {
     private Long id;
     private String name;
