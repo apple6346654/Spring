@@ -23,5 +23,6 @@ public class MemberServiceTest {
 
         //then
         Assertions.assertThat(member).isEqualTo(findMember); // 두개가 같냐
+                                                            // 다시 확인하기
     }
 }
