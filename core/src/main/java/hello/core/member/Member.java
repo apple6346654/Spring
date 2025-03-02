@@ -6,7 +6,7 @@ public class Member {
     private String name;
     private Grade Grade;
 
-    public Member(Long id, String name, hello.core.member.Grade grade) {
+    public Member(Long id, String name, Grade grade) {
         this.id = id;
         this.name = name;
         this.Grade = grade;
@@ -28,11 +28,11 @@ public class Member {
         this.name = name;
     }
 
-    public hello.core.member.Grade getGrade() {
+    public Grade getGrade() {
         return Grade;
     }
 
-    public void setGrade(hello.core.member.Grade grade) {
+    public void setGrade(Grade grade) {
         this.Grade = grade;
     }
 }

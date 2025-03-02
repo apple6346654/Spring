@@ -4,7 +4,7 @@ public interface MemberService {
 
     void join(Member member); //로그인
 
-    Member findMember(Member member); //회원조회
+    Member findMember(Long memberId); //회원조회
 
 
 }
