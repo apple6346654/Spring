@@ -9,7 +9,7 @@ import hello.core.order.OrderServiceImp;
 
 public class AppConfig {
 
-    public MemberService memverService(){ //생성자 주입
+    public MemberService memberService(){ //생성자 주입
         return new MemberServiceImpl(new MemoryMemberRepository());
     }
 
