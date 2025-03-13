@@ -9,21 +9,28 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImp;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class AppConfig {
 
+    @Bean
     public MemberService memberService(){ //생성자 주입
         return new MemberServiceImpl(memberRepository());
     }
 
-    private MemberRepository memberRepository(){
+    @Bean
+    public MemberRepository memberRepository(){
         return new MemoryMemberRepository();
     }
 
+    @Bean
     public OrderService orderService(){
         return new OrderServiceImp(new MemoryMemberRepository(), discountPolicy());
     }
 
+    @Bean
     public DiscountPolicy discountPolicy(){
        // return new FixDiscountPolicy();  //바꾸고 싶을 떄 이부분만 바꾸면 된다!!
         return new RateDiscountPolicy();
