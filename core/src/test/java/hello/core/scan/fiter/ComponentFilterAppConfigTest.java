@@ -10,11 +10,11 @@ public class ComponentFilterAppConfigTest {
 
     @Test
     void filterScan(){
-        new AnnotationConfigApplicationContext()
+        new AnnotationConfigApplicationContext();
     }
 
     @Configuration
-    @ComponentScan(includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = MyIncludeComponent.class),
+    @ComponentScan(includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = MyIncludeComponent.class)
     )
     static class ComponentFilterAppConfig{
 
