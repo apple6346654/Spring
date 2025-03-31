@@ -29,17 +29,7 @@ public class LogDemoContoroller {
         return "ok";
     }
 
-    @RequestMapping("log-demo")
-    @ResponseBody // 문자로 그대로 응답가능
-    public String logDemo(HttpServletRequest request) {
-        MyLogger myLogger = myLoggerProvider.getObject();
-        String requestURL = request.getRequestURL().toString(); //고객이 어떤 URL로 요청했는지 알 수 있음
-        myLogger.setRequestURL(requestURL);
 
-        myLogger.log("conroller test");
-        logDemoService.logic("testId");
-        return "ok";
-    }
 
 
 
