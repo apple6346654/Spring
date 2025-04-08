@@ -21,8 +21,8 @@ public class Member {
 
     @Embedded
     private Address address;
-
+                                     //"연관관계의 주인은 Order 엔티티 쪽의 member 필드야."
     @OneToMany(mappedBy = "member") //order테이블에 있는 member 필드에 의해 매핑 된거야.
-                                    // 여기서 값을 넣어도 FK값은 변경 되지 않는다.
+                                    //여기서 값을 넣어도 FK값은 변경 되지 않는다.
     private List<Order> orders = new ArrayList<>();
 }
